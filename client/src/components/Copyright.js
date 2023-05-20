@@ -5,8 +5,8 @@ export default function Copyright(props) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
         {'Copyright © '}
-        <Link color="inherit" href="localhost:9090">
-            Your Website
+        <Link color="inherit" href="http://localhost:9090">
+            My Website
         </Link>{' '}
         {new Date().getFullYear()}
         {'.'}
