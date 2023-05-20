@@ -1,0 +1,66 @@
+table {
+    td{
+    font-size: 1.1rem;
+}   th{
+    font-size: 1.1rem ; 
+}
+}
+
+button.qt{
+    border: none;
+    background-color: white;
+    font-size: 2rem;
+    margin:0px 8px;
+}
+div.QT{
+    justify-content: flex-start;
+    position: relative;
+}
+
+button.trash{
+    position: absolute;
+    left: 82%;
+    top: 12px;
+
+    border: none;
+    background-color: white;
+    color: red;
+}
+
+div.card-body{
+     div.row{
+    justify-content: space-between;
+    }
+}
+
+div.paypal{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    div.paypalbutton{
+        width: 100%;
+    }
+}
+
+
+div.empty{
+    min-height: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    h1{
+        font-size: 4rem;
+        text-align: center;
+        flex-basis:100%;
+    }
+    a{
+        // width: 100%;
+        font-size: 2rem;
+        text-align: center;
+        flex-basis:100%;
+    }
+    div.blank{
+        flex-basis:100%;
+        height: 20%;
+
+    }
+}

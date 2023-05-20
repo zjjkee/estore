@@ -1,0 +1,20 @@
+img.image{
+    width: 100%;
+}
+
+div.text{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .text_{
+        width: 25vh;
+        height: 5vh;
+        text-align: center;
+        background-color: #FFC152;
+        h4{
+            padding :10px;
+            margin-bottom: 0px;
+            font-size: 1.2rem;
+        }
+    }
+}

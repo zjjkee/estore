@@ -1,0 +1,51 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  
+    .Product {
+      margin-top: 3vh;
+      margin-left: 25px;
+      margin-right: 25px;
+
+      height: 52vh;
+      width: 45vh;
+      }
+      .imageContainer {
+        overflow:inherit;
+        height: 55%;
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: scale(1.25);
+          }
+        }
+      }
+      .cardbody{
+        position: relative;
+        .card-text{
+            z-index: 1;
+        }
+      }
+    }
+  
+button.cart{
+    color: transparent;  
+    text-shadow: 0 0 0 white;
+    margin-top: auto;
+    position: absolute;
+    width: 5vw;
+    min-width: 50px;
+    font-size: larger;
+    z-index: 0;
+    left: 10px;
+    bottom: 10px;
+}
+details{
+    z-index: 2;
+    font-size: small;
+}

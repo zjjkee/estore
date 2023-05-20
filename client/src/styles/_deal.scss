@@ -1,0 +1,36 @@
+@media (min-width: 1025px) {
+    .h-custom {
+      height: 100 !important;
+    }
+  }
+  
+  .horizontal-timeline .items {
+    border-top: 3px solid #CAE5BC;
+  }
+  
+  .horizontal-timeline .items .items-list {
+    position: relative;
+    margin-right: 0;
+  }
+  
+  .horizontal-timeline .items .items-list:before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #ddd;
+    top: 0;
+    margin-top: -5px;
+    
+  }
+  
+  .horizontal-timeline .items .items-list {
+    padding-top: 15px;
+  }
+  
+  .border-color-custom {
+    border-color: #CAE5BC !important;
+    border-width: 6px;
+  }
+

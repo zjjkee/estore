@@ -1,0 +1,38 @@
+img.img{
+    width: 100%;
+}
+
+#button{
+    display: flex;
+    justify-content: center;
+    button.shopping{
+        width: 100%;
+        a.aaa{
+            text-decoration: none;
+            color:white;
+            font-size:1rem;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1000px){
+    div.phone{display: none;}
+    #button{
+        position: absolute;
+        left: 43%;
+        bottom: 25%;
+        width: 15vw;
+        height: 7vh;
+        button.shopping{
+            width: 100%;
+            a.aaa{
+                text-decoration: none;
+                color:white;
+                font-size:1rem;
+            }
+    
+        }
+    }
+}
+

@@ -1,0 +1,18 @@
+  
+div.arrows{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    height: 100%;
+    button{
+      background-color: white;
+      border:none;
+      .arrow{
+        width: 40px;
+        }
+    }
+    input{
+        width: 30px;
+    }
+}
