@@ -20,7 +20,7 @@ class ProductService {
 
     allproduct() {
       
-      return axios.get( "http://localhost:8080/api/allproducts"
+      return axios.get( process.env.REACT_APP_BASE_URL+"/api/allproducts"
       )
     }
 
