@@ -21,7 +21,7 @@ export default function Review(props) {
     var address_ = [address1,city,state,zip,counrty];
   }
 
-  console.log('items!:',items,'address:!',props.addressinfo)
+  // console.log('items!:',items,'address:!',props.addressinfo)
   return (
     <>
     <Modal show={props.showreview} onHide={()=>{props.setShowreview(false)}}>

@@ -18,7 +18,13 @@ export default function Paypal(props) {
 
     const items = useSelector(state=>state.item.value);
 
-    let goods = items.map(item=>{return {product:item.product._id,title:item.product.title,price:item.product.price,Qt:item.Qt}});
+
+    let goods = items.map(item=>{return {
+      product:item.product._id,
+      title:item.product.title,
+      price:item.product.price,
+      Qt:item.Qt,
+      seller:item.product.seller}});
     console.log('goods',goods)
 
     // creates a paypal order
@@ -48,15 +54,17 @@ export default function Paypal(props) {
     // check Approval
     const onApprove = (data, actions) => {
       return actions.order.capture().then((details) => {
-        console.log('details',details)
+        console.log('details',details);
         (async function(){
           await OrderService.onpapprove_save(details.id,checkout_show(items).total, goods ,props.addressinfo)
           await CartService.removeAll();
           dispatch(setrender());
             navigate('/deal',{ state: {
-              addressinfo: props.addressinfo,
+              address: props.addressinfo,
               id: details.id,
               update_time: details.update_time,
+              items:goods,
+              amount:details.purchase_units[0].amount.value,
               showtip:true
             } })
         }())

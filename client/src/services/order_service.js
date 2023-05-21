@@ -21,7 +21,15 @@ class OrderService {
             )
     }
 
-    getorder(){
+    getMyOrder(){
+        let  token = JSON.parse(localStorage.getItem("user")).token;
+        return axios.get(API_URL+'/myorder',
+            {headers: {
+                'Authorization': token,
+            }})
+    }
+
+    getAllOrder(){
         let  token = JSON.parse(localStorage.getItem("user")).token;
         return axios.get(API_URL,
             {headers: {

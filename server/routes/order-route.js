@@ -26,6 +26,13 @@ router.post("/",(req,res)=>{
 })
 
 router.get("/",(req,res)=>{
+    Order.find({}).then(data=>{
+        res.status(200).send(data)
+    }).catch(e=>{res.send("Order Info Got Wrong.")})
+    
+})
+
+router.get("/myorder",(req,res)=>{
     Order.find({buyer:req.user._id}).then(data=>{
         res.status(200).send(data)
     }).catch(e=>{res.send("Order Info Got Wrong.")})

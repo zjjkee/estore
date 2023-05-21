@@ -11,11 +11,10 @@ import { updataitems } from "../redux/itemSlice";
 const Nav = (props) => {
   let { currentUser, setCurrentUser } = props;
   const dispatch = useDispatch();
- let render = useSelector(state=>state.render.value);
+  const render = useSelector(state=>state.render.value);
+  const items = useSelector(state=>state.item.value);
 
-  const [items,setItems] = useState([]);
   let sum = 0;
-  setrender();
   for(let i of items){
     sum+=i.Qt;
   }
@@ -35,18 +34,13 @@ const Nav = (props) => {
     async function getdata(){
     try{
     let res = await CartService.get();
-    setItems(res.data)
-
+    dispatch(updataitems(res.data));
     } catch(err){
-      // alert(err.resonse.data)
+      alert(err.resonse.data)
     }
   }
     getdata();
   },[render])
-
-  useEffect(()=>{
-    dispatch(updataitems(items));
-  },[items])
   
 
   return (

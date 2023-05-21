@@ -11,9 +11,9 @@ export default function Purchase() {
 
 
   useEffect(()=>{
-    OrderService.getorder().then(res=>{
+    OrderService.getMyOrder().then(res=>{
       setOrders(res.data);
-      console.log('res.data',res.data);
+      // console.log('res.data',res.data);
       
     }).catch(e=>{
       alert(e.response.data);
@@ -53,7 +53,7 @@ export default function Purchase() {
         <td>{i++}</td>
         <td colSpan={2}>{order.id}</td>
         <td>{order.date}</td>
-        <td>{order.amount}</td>
+        <td>-${order.amount}</td>
       </tr>
         )}
       </tbody>

@@ -7,25 +7,22 @@ import {
   MDBRow
 } from "mdb-react-ui-kit";
 import Modal from 'react-bootstrap/Modal';
-import { useDispatch } from "react-redux";
 import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 
 
 export default function Deal() {
   const location = useLocation();
   const { state } = location;
-  console.log('location:',location, 'state:',state);
-
-  const navigate = useNavigate();
+  // console.log('location:',location, 'state:',state);
 
 
-  const[show,setShow] = useState(false); 
+
+  const[show,setShow] = useState(state.showtip); 
+
   function handleClose(){
-    setShow(state.showtip)
+    setShow(false)
   }
-
 
 
 
@@ -97,7 +94,7 @@ export default function Deal() {
                         <p className="mb-0">Tax</p>
                       </MDBCol>
                       <MDBCol md="4" lg="3">
-                        <p className="mb-0"> {(11.2/100*state.amount).toFixed(2)}</p>
+                        <p className="mb-0"> ${(11.2/100*Number(state.amount)).toFixed(2)}</p>
                       </MDBCol>
                     </MDBRow>
                   </div>

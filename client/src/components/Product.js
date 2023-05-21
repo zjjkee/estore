@@ -56,9 +56,10 @@ const Product = ({ data ,currentUser, deleteshow, setDeleteshow }) => {
           {data.title} 
         </Card.Title>
         <Card.Text>
-        Price: {data.price}$
+        Price: ${data.price}
         <br/>
         Seller:  {data.seller.username} <br />
+        UploadDate: {data.date.replace(/T.*Z$/ig,' ')} <br />
         <a onClick={handleShow}>More details</a>
         </Card.Text>
         {currentUser? (currentUser.user.role!=="seller"?
@@ -80,10 +81,11 @@ const Product = ({ data ,currentUser, deleteshow, setDeleteshow }) => {
           <Modal.Title>{data.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p> <span style={{fontWeight:'bold'}}>Price:</span> {data.price}$</p>
+          <p> <span style={{fontWeight:'bold'}}>Price:</span>${data.price}</p>
           <p><span style={{fontWeight:'bold'}}>Category:</span> {data.category}</p>
           <p><span style={{fontWeight:'bold'}}>Seller:</span> {data.seller.username}</p>
           <p><span style={{fontWeight:'bold'}}>Contact:</span> {data.seller.email}</p>
+          <p><span style={{fontWeight:'bold'}}>Upload Date:</span> {data.date.replace(/(T)|(\..*Z$)/ig,' ')}</p>
           <p><span style={{fontWeight:'bold',fontSize:'1.3rem'}}>Description:</span> {data.description}</p>
         </Modal.Body>
         <Modal.Footer>

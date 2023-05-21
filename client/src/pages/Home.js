@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import Product from "../components/Product";
 import Pagebutton from "../components/Pagebutton";
 import { useSelector, useDispatch } from 'react-redux';
@@ -42,11 +44,31 @@ export default function Home(props) {
     return (
     <div style={{ minHeight: "100vh"}}>  
         <img className='image'  src={"https://amazonproone.vercel.app/static/media/img2.bc1bdb910ead16c65197.jpg"} alt=''/>
-        <div className="text">
-            <div className="text_">
-                <h4 >Our Product</h4>
-            </div>
-        </div>
+        <Container className="mt-5">
+            <Row style={{justifyContent:'space-evenly'}}>
+
+                <Col sm={3}>              
+                    <div className="sort">
+                            <Button variant="light">Light</Button>{' '}
+                    </div>
+                </Col>  
+
+                <Col sm={5}>
+                <Form className="d-flex">
+                    <Form.Control
+                    type="search"
+                    placeholder="Search Via Name"
+                    className="me-2"
+                    aria-label="Search"
+                    />
+                    <Button  variant="warning" >
+                    Search
+                    </Button>{' '}
+                </Form>
+                </Col>
+
+            </Row>
+        </Container>
         
         <div className="products" >
             {data &&

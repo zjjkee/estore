@@ -40,19 +40,25 @@ export default function Myproduct({currentUser}) {
     if(currentUser){
     return (
         <>            
-                {emptyornull(myproducts)?
-                <div className="empty" style={{minHeight:"100vh" }}>
-                    <div className="blank"></div>
-                    <h1 >You Have NOt Post Any Product!</h1>
-                    <a href="/post">Go Post!</a>
-                    <div className="blank"></div>
-                </div>:
-                <div className="products" >
-                {myproducts.map((d) => {
-                    return <Product data={d} currentUser={currentUser} deleteshow={deleteshow} setDeleteshow={setDeleteshow} />
-                })}
+            <div className="text">
+                <div className="text_">
+                    <h4 >My Products On Sell</h4>
                 </div>
-                }
+            </div>
+
+            {emptyornull(myproducts)?
+            <div className="empty" style={{minHeight:"100vh" }}>
+                <div className="blank"></div>
+                <h1 >You Have NOt Post Any Product!</h1>
+                <a href="/post">Go Post!</a>
+                <div className="blank"></div>
+            </div>:
+            <div className="products" >
+            {myproducts.map((d) => {
+                return <Product data={d} currentUser={currentUser} deleteshow={deleteshow} setDeleteshow={setDeleteshow} />
+            })}
+            </div>
+            }
         </>
     )
     }else{

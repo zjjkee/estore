@@ -47,7 +47,7 @@ router.post("/", upload.single('file'), async (req, res) =>{
 })
 
 router.get('/myproducts', (req, res) =>{ 
-    Product.find({seller:req.user._id}).then(data=>{
+    Product.find({seller:req.user._id}).populate("seller").then(data=>{
         // console.log('data',data);
         res.status(200).send(data)
     }).catch(e=>res.send(e))
