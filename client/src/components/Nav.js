@@ -28,9 +28,8 @@ const Nav = (props) => {
     setCurrentUser(null);
     // navigate("/signin");
   };
-  // useEffect(()=>{
 
-  // })
+  
 
   useEffect(()=>{
     async function getdata(){

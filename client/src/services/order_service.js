@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "http://127.0.0.1:8080/api/order";
+const API_URL = process.env.REACT_APP_BASE_URL+"/api/order";
 
 
 class OrderService {

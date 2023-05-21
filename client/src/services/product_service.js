@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "http://127.0.0.1:8080/api/products";
+const API_URL = process.env.REACT_APP_BASE_URL+"/api/products";
 
 class ProductService {
 
@@ -19,6 +19,7 @@ class ProductService {
     }
 
     allproduct() {
+      
       return axios.get( "http://localhost:8080/api/allproducts"
       )
     }

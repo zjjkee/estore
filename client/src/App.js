@@ -26,7 +26,6 @@ import "./styles/style.css";
 function App() {
   let [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser());
 
-
   return (
     <div className="App">
       <Nav currentUser={currentUser} setCurrentUser={setCurrentUser} />
