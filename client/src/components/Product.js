@@ -67,7 +67,7 @@ const Product = ({ data ,currentUser, deleteshow, setDeleteshow }) => {
         <Button className='cart' variant="primary" onClick={()=>{Islogin()}} >🛒</Button>:null
         ):<Button className='cart' variant="primary" onClick={()=>{Islogin()}} >🛒</Button>
         }
-        {deleteshow?<Button className='trash' variant='danger' onClick={deleteProduct}><MDBIcon style={{color:'white'}} fas icon="trash-alt" /></Button>:null
+        {deleteshow?<Button className='delete' variant='danger' onClick={deleteProduct}><MDBIcon style={{color:'white'}} fas icon="trash-alt" /></Button>:null
           
         }
 

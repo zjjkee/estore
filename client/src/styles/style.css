@@ -10989,7 +10989,7 @@ button.cart {
   bottom: 5px;
 }
 
-button.trash {
+button.delete {
   position: absolute;
   top: 100%;
   left: 85%;
