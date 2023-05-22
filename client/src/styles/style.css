@@ -11055,7 +11055,7 @@ img.image {
 div.text {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 div.text .text_ {
   width: 30vh;

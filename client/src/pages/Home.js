@@ -73,12 +73,13 @@ export default function Home(props) {
           }
           alt=""
         />
+
         <div className="text">
-          <div className="text_">
-            <h4>All Products</h4>
+          <div className="text_" style={{width:'50vh',height:'10px'}}>
           </div>
         </div>
-        <Container className="mt-5">
+
+        <Container className="mt-2">
           <Row style={{ justifyContent: "flex-end" }}>
             <Col sm={3}>
               <div className="sort">
