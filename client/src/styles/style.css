@@ -18,6 +18,12 @@ div.App {
   height: 100%;
 }
 
+.card .card-body .card-text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #747373;
+}
+
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -10946,7 +10952,7 @@ span.logo div.dot {
   margin-left: 27px;
   margin-right: 27px;
   height: 54vh;
-  width: 47vh;
+  width: 44vh;
 }
 .products .imageContainer {
   overflow: inherit;
@@ -10974,7 +10980,7 @@ button.cart {
   text-shadow: 0 0 0 white;
   margin-top: auto;
   position: absolute;
-  width: 5vw;
+  width: 4.5vw;
   min-width: 50px;
   font-size: larger;
   z-index: 0;

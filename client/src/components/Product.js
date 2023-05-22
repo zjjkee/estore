@@ -9,6 +9,7 @@ import { encodeImage } from '../services/utils';
 import { MDBIcon } from 'mdb-react-ui-kit';
 import ProductService from '../services/product_service';
 import CartService from "../services/cart_service";
+import { Link } from '@mui/material';
 
 
 const Product = ({ data ,currentUser, deleteshow, setDeleteshow }) => {
@@ -60,7 +61,7 @@ const Product = ({ data ,currentUser, deleteshow, setDeleteshow }) => {
         <br/>
         Seller:  {data.seller.username} <br />
         UploadDate: {data.date.replace(/T.*Z$/ig,' ')} <br />
-        <a onClick={handleShow}>More details</a>
+        <Link onClick={handleShow}>More details</Link>
         </Card.Text>
         {currentUser? (currentUser.user.role!=="seller"?
         <Button className='cart' variant="primary" onClick={()=>{Islogin()}} >🛒</Button>:null
