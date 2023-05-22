@@ -39,11 +39,12 @@ button.cart{
     margin-top: auto;
     position: absolute;
     width: 4.5vw;
-    min-width: 50px;
-    font-size: larger;
+    height: 40px;
+    min-width: 45px;
+    font-size: medium;
     z-index: 0;
-    left: 10px;
-    bottom: 10px;
+    left: 5px;
+    bottom: 5px;
 }
 details{
     z-index: 2;

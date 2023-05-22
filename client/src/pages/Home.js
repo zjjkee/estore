@@ -75,7 +75,7 @@ export default function Home(props) {
         />
 
         <div className="text">
-          <div className="text_" style={{width:'50vh',height:'10px'}}>
+          <div className="text_" style={{width:'45vw',height:'10px'}}>
           </div>
         </div>
 
