@@ -7,7 +7,7 @@ div.text{
     justify-content: center;
     margin-top: 20px;
     .text_{
-        width: 25vh;
+        width: 30vh;
         height: 5vh;
         text-align: center;
         background-color: #FFC152;
@@ -17,4 +17,9 @@ div.text{
             font-size: 1.2rem;
         }
     }
+}
+
+img.sort{
+    width: 23px;
+    height: 25px;
 }

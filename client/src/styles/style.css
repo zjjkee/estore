@@ -10902,7 +10902,7 @@ nav ul li a {
 }
 
 span.text {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: white;
   text-decoration: none;
 }
@@ -10943,10 +10943,10 @@ span.logo div.dot {
 }
 .products .Product {
   margin-top: 3vh;
-  margin-left: 25px;
-  margin-right: 25px;
-  height: 52vh;
-  width: 45vh;
+  margin-left: 27px;
+  margin-right: 27px;
+  height: 54vh;
+  width: 47vh;
 }
 .products .imageContainer {
   overflow: inherit;
@@ -11058,7 +11058,7 @@ div.text {
   margin-top: 20px;
 }
 div.text .text_ {
-  width: 25vh;
+  width: 30vh;
   height: 5vh;
   text-align: center;
   background-color: #FFC152;
@@ -11067,6 +11067,11 @@ div.text .text_ h4, div.text .text_ .h4 {
   padding: 10px;
   margin-bottom: 0px;
   font-size: 1.2rem;
+}
+
+img.sort {
+  width: 23px;
+  height: 25px;
 }
 
 table td {

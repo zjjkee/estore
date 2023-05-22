@@ -1,26 +1,49 @@
 import React, { useState, useEffect } from "react";
-import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, Row, Image, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Product from "../components/Product";
 import Pagebutton from "../components/Pagebutton";
 import { useSelector, useDispatch } from 'react-redux';
-import { setproducts } from "../redux/productsSlice";
+import { setproducts,timeascending,timedescending,priceascending,pricedescending } from "../redux/productsSlice";
 import ProductService from '../services/product_service';
+
+
+
 
 export default function Home(props) {
     const page = useSelector(state => state.page.value)
     const products = useSelector(state => state.products.value)
 
+
     const [data, setData] = useState(null);
+    const [showpage, setShowpage] = useState(false);
+
     const dispatch = useDispatch();
 
+    function handleClickTimeUp(){
+        dispatch(timeascending())
+    }
+
+    function handleClickTimeDown(){
+        dispatch(timedescending())
+    }
+
+    function handleClickPriceUp(){
+        dispatch(priceascending())
+    }
+
+    function handleClickPricedown(){
+        dispatch(pricedescending())
+    }
+
+    
       useEffect(() => {
         async function getData() {
             try{
             let rawdata = await ProductService.allproduct();
             let alldata = rawdata.data
             // console.log('alldata',alldata)
-            dispatch(setproducts(alldata))            
+            dispatch(setproducts(alldata))
+            setShowpage(true);            
             }catch(err){
                 // alert(err)
                 console.log(err)
@@ -37,23 +60,93 @@ export default function Home(props) {
             }
         }
         setData(showdata)
-        // console.log('products',products)
+        console.log('products',products)
       },[page,products])
 
 
     return (
-    <div style={{ minHeight: "100vh"}}>  
-        <img className='image'  src={"https://amazonproone.vercel.app/static/media/img2.bc1bdb910ead16c65197.jpg"} alt=''/>
+      <div style={{ minHeight: "100vh" }}>
+        <img
+          className="image"
+          src={
+            "https://amazonproone.vercel.app/static/media/img2.bc1bdb910ead16c65197.jpg"
+          }
+          alt=""
+        />
+        <div className="text">
+          <div className="text_">
+            <h4>All Products</h4>
+          </div>
+        </div>
         <Container className="mt-5">
-            <Row style={{justifyContent:'space-evenly'}}>
+          <Row style={{ justifyContent: "flex-end" }}>
+            <Col sm={3}>
+              <div className="sort">
 
-                <Col sm={3}>              
-                    <div className="sort">
-                            <Button variant="light">Light</Button>{' '}
-                    </div>
-                </Col>  
+              <OverlayTrigger
+                  placement="bottom"
+                  overlay={
+                    <Tooltip id="button-tooltip-2">Time Descending</Tooltip>
+                  }
+                >
+                  {({ ref, ...triggerHandler }) => (
+                    <Button
+                      className="timedown"
+                      variant="light"
+                      onClick={handleClickTimeDown}
+                      {...triggerHandler}
+                    >
+                      <img
+                        ref={ref}
+                        className="sort"
+                        src="/timedown.png"
+                        alt=""
+                      />
+                    </Button>
+                  )}
+                </OverlayTrigger>
 
-                <Col sm={5}>
+                <OverlayTrigger
+                  placement="bottom"
+                  overlay={
+                    <Tooltip id="button-tooltip-2">Price Ascending</Tooltip>
+                  }
+                >
+                  {({ ref, ...triggerHandler }) => (
+                <Button
+                className="moneyup"
+                variant="light"
+                onClick={handleClickPriceUp}
+                {...triggerHandler}
+              >
+                <img ref={ref} className="sort" src="/moneyup.png" alt="" />
+              </Button>
+                  )}
+                </OverlayTrigger>
+
+                <OverlayTrigger
+                  placement="bottom"
+                  overlay={
+                    <Tooltip id="button-tooltip-2">Price Descending</Tooltip>
+                  }
+                >
+                  {({ ref, ...triggerHandler }) => (
+                <Button
+                className="moneyup"
+                variant="light"
+                onClick={handleClickPricedown}
+                {...triggerHandler}
+              >
+                <img ref={ref} className="sort" src="/moneydown.png" alt="" />
+              </Button>
+                  )}
+                </OverlayTrigger>
+
+
+              </div>
+            </Col>
+
+            {/* <Col sm={5}>
                 <Form className="d-flex">
                     <Form.Control
                     type="search"
@@ -65,17 +158,17 @@ export default function Home(props) {
                     Search
                     </Button>{' '}
                 </Form>
-                </Col>
-
-            </Row>
+                </Col> */}
+          </Row>
         </Container>
-        
-        <div className="products" >
-            {data &&
+
+        <div className="products">
+          {data &&
             data.map((d) => {
-                return <Product data={d} currentUser={props.currentUser}/>;
+              return <Product data={d} currentUser={props.currentUser} />;
             })}
         </div>
-        <Pagebutton/>
-    </div>
-)}
+        {showpage && <Pagebutton />}
+      </div>
+    );}
+
