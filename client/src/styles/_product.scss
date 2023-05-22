@@ -46,6 +46,14 @@ button.cart{
     left: 5px;
     bottom: 5px;
 }
+
+button.trash{
+  position: absolute;
+  top:100%;
+  left: 85%;
+  top: 74%;
+}
+
 details{
     z-index: 2;
     font-size: small;

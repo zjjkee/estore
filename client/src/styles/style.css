@@ -10980,13 +10980,20 @@ button.cart {
   text-shadow: 0 0 0 white;
   margin-top: auto;
   position: absolute;
-  width: 4.5vw;
-  height: 40px;
+  width: 4.2vw;
+  height: 38px;
   min-width: 45px;
   font-size: medium;
   z-index: 0;
   left: 5px;
   bottom: 5px;
+}
+
+button.trash {
+  position: absolute;
+  top: 100%;
+  left: 85%;
+  top: 74%;
 }
 
 details {
