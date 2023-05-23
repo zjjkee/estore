@@ -73,7 +73,7 @@ export default function SignIn(props) {
               required
               fullWidth
               id="email"
-              label="Email/Username * "
+              label="Email/Username  "
               name="email_or_username"
               autoFocus
               onChange={handleChangeE_or_u}
