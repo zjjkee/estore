@@ -5,6 +5,9 @@ const dotenv = require("dotenv");
 dotenv.config();
 const Product = require("./models").productModel;
 
+const fs = require("fs");
+const https = require("https");
+
 const authRoute = require("./routes").auth;
 const productRoute = require("./routes").product;
 const cartRoute = require("./routes").cart;
@@ -61,6 +64,13 @@ app.use(
   orderRoute
 )
 
-app.listen(8080, () => {
-  console.log("Server running on port 8080.");
-});
+// app.listen(8080, () => {
+//   console.log("Server running on port 8080.");
+// });
+
+const PORT =8080;
+const options = {
+          key: fs.readFileSync('./private.key'),
+          cert: fs.readFileSync('./certificate.crt')
+};
+https.createServer(options,app).listen(PORT, () => console.log(`App listening on port ${PORT}!`));
