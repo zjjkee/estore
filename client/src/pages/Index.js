@@ -4,10 +4,10 @@ import Button from 'react-bootstrap/Button';
 export const Index = () => {
 
   const data = [
-    "./background1.jpg",
-    "./backgounrd2.jpg",
-    "./background3.jpg",
-    "./background4.jpg"
+    "/background1.jpg",
+    "/background2.jpg",
+    "/background3.jpg",
+    "/background4.jpg"
   ]
 
 

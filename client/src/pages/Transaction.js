@@ -46,6 +46,7 @@ export default function Transaction() {
     for(let o of order.goods){
         sum+=o.price*o.Qt
     }
+    sum = Number(sum.toFixed(2))
     return sum;
   }
 
