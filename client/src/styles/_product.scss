@@ -5,11 +5,11 @@
   
     .Product {
       margin-top: 3vh;
-      margin-left: 24px;
-      margin-right: 24px;
+      margin-left: 30px;
+      margin-right: 30px;
 
       height: 56vh;
-      width: 44vh;
+      width: 45vh;
       }
       .imageContainer {
         overflow:inherit;
@@ -36,14 +36,17 @@
 button.cart{
     color: transparent;  
     text-shadow: 0 0 0 white;
-    margin-top: auto;
+
     position: absolute;
+    top: 100%;
+    left: 75%;
+    top: 120px;
+
     width: 4.2vw;
     height: 38px;
     min-width: 45px;
     font-size: medium;
     z-index: 0;
-    left: 5px;
     bottom: 5px;
 }
 
