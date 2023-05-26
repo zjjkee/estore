@@ -15,6 +15,7 @@ import Paypal from "../components/Paypal";
 export default function Review(props) {
 
   const items = useSelector(state => state.item.value);
+  console.log('itemssss',items)
 
   if(props.addressinfo){
     var {firstname,lastname,address1,phone,city,state,zip,counrty}=props.addressinfo
@@ -36,9 +37,9 @@ export default function Review(props) {
       </Typography>
       <List disablePadding>
         {items.map((item) => (
-          <ListItem key={item.title} sx={{ py: 1, px: 0 }}>
-            <ListItemText primary={item.title} secondary={'x'+item.Qt} />
-            <Typography variant="body2">${item.price}</Typography>
+          <ListItem key={item.product.title} sx={{ py: 1, px: 0 }}>
+            <ListItemText primary={item.product.title} secondary={'x'+item.Qt} />
+            <Typography variant="body2">${item.product.price}</Typography>
           </ListItem>
         ))}
           <ListItem key={'tax'} sx={{ py: 1, px: 0 }}>
