@@ -1,0 +1,30 @@
+[33m25c1ede[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD^
+[33mec3594c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: pull: Fast-forward
+[33m036b566[m HEAD@{2}: reset: moving to HEAD
+[33m036b566[m HEAD@{3}: reset: moving to HEAD^
+[33mfa4c42d[m HEAD@{4}: reset: moving to HEAD^
+[33m1120742[m HEAD@{5}: reset: moving to HEAD^
+[33m25c1ede[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{6}: reset: moving to 25c1
+[33mfa4c42d[m HEAD@{7}: reset: moving to fa4c
+[33m036b566[m HEAD@{8}: reset: moving to 036b
+[33m25c1ede[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{9}: reset: moving to HEAD
+[33m25c1ede[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{10}: pull: Fast-forward
+[33m1120742[m HEAD@{11}: pull: Fast-forward
+[33mfa4c42d[m HEAD@{12}: pull: Fast-forward
+[33m036b566[m HEAD@{13}: pull: Fast-forward
+[33mbd538d8[m HEAD@{14}: reset: moving to HEAD
+[33mbd538d8[m HEAD@{15}: pull: Fast-forward
+[33m5aad9b6[m HEAD@{16}: pull: Fast-forward
+[33mcedecd2[m HEAD@{17}: pull: Fast-forward
+[33m64f5d29[m HEAD@{18}: pull: Fast-forward
+[33m8573dda[m HEAD@{19}: pull: Fast-forward
+[33m4dc6536[m HEAD@{20}: pull: Fast-forward
+[33m88bb689[m HEAD@{21}: pull: Fast-forward
+[33m04e8814[m HEAD@{22}: pull: Fast-forward
+[33m769803f[m HEAD@{23}: pull: Fast-forward
+[33m37bbea0[m HEAD@{24}: pull: Fast-forward
+[33ma951459[m HEAD@{25}: pull: Fast-forward
+[33mbb09024[m HEAD@{26}: pull: Fast-forward
+[33mfce7ee5[m HEAD@{27}: reset: moving to HEAD
+[33mfce7ee5[m HEAD@{28}: pull: Fast-forward
+[33m72bb5cc[m HEAD@{29}: clone: from https://github.com/zjjkee/estore
